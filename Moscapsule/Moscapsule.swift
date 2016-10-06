@@ -30,21 +30,21 @@ import Foundation
 
 public enum ReturnCode: Int {
     case success = 0
-    case unacceptable_Protocol_Version = 1
-    case identifier_Rejected = 2
-    case broker_Unavailable = 3
+    case unacceptableProtocolVersion = 1
+    case identifierRejected = 2
+    case brokerUnavailable = 3
     case unknown = 256
 
     public var description: String {
         switch self {
         case .success:
-            return "Success"
-        case .unacceptable_Protocol_Version:
-            return "Unacceptable_Protocol_Version"
-        case .identifier_Rejected:
-            return "Identifier_Rejected"
-        case .broker_Unavailable:
-            return "Broker_Unavailable"
+            return "success"
+        case .unacceptableProtocolVersion:
+            return "unacceptableProtocolVersion"
+        case .identifierRejected:
+            return "identifierRejected"
+        case .brokerUnavailable:
+            return "brokerUnavailable"
         case .unknown:
             return "Unknown"
         }
@@ -52,8 +52,8 @@ public enum ReturnCode: Int {
 }
 
 public enum ReasonCode: Int {
-    case disconnect_Requested = 0
-    case keepAlive_Timeout = 1
+    case disconnectRequested = 0
+    case keepAliveTimeout = 1
     
     // Mosquitto confuses ReasonCode with MosqResult.
     // It possibly returns MosqResult in _mosquitto_loop_rc_handle.
@@ -77,9 +77,9 @@ public enum ReasonCode: Int {
 
     public var description: String {
         switch self {
-        case .disconnect_Requested:
+        case .disconnectRequested:
             return "Disconnect_Requested"
-        case .keepAlive_Timeout:
+        case .keepAliveTimeout:
             return "KeepAlive_Timeout"
         case .mosq_NO_CONN:
             return "MOSQ_NO_CONN"
