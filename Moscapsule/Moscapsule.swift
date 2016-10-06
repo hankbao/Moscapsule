@@ -78,17 +78,17 @@ public enum ReasonCode: Int {
     public var description: String {
         switch self {
         case .disconnectRequested:
-            return "Disconnect_Requested"
+            return "disconnectRequested"
         case .keepAliveTimeout:
-            return "KeepAlive_Timeout"
+            return "KeepAliveTimeout"
         case .mosq_NO_CONN:
-            return "MOSQ_NO_CONN"
+            return "mosq_NO_CONN"
         case .mosq_CONN_LOST:
-            return "MOSQ_CONN_LOST"
+            return "mosq_CONN_LOST"
         case .mosq_ERRNO:
-            return "MOSQ_ERRNO"
+            return "mosq_ERRNO"
         case .unknown:
-            return "Unknown"
+            return "unknown"
         default:
             return self.rawValue.description
         }
